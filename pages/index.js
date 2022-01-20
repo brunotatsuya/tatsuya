@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
+import PresentationCard from '../components/presentation-card'
+import Resume from '../components/resume'
 
 export default function Home() {
 	return (
@@ -10,10 +12,11 @@ export default function Home() {
 				<title>tatsuya</title>
 				<link rel="shortcut icon" href="/images/favicon.ico" />
 			</Head>
-			<Navbar></Navbar>
-			<div>
-				<h1>Hello world</h1>
-			</div>
+			<main>
+				<Navbar></Navbar>
+				<PresentationCard></PresentationCard>
+				<Resume></Resume>
+			</main>
 		</div>
 	)
 }

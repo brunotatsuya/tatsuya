@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark fixed-top" id="mainNav">
+    <nav className="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div className="container">
         <Link href="/" passHref>
           <a className="navbar-brand" >
@@ -18,10 +18,10 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#resume">Resume</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
