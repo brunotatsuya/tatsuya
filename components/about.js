@@ -20,7 +20,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          <div className="container font-monospace" data-aos="fade-left" data-aos-duration="800">
+          <div className="container font-monospace fs-6" data-aos="fade-left" data-aos-duration="800">
             Hi, my name is <b className="text-secondary">Bruno</b>! I am a computer scientist and software developer with 2+ years of experience, living in São Paulo, Brazil. Currently working as a Python Full-Stack Developer at <a target="_blank" href="https://www.itau.com.br/" rel="noreferrer">Itaú Unibanco</a>, I am also an entusiast in Machine Learning and Natural Language Processing techniques.
             <br /><br />Here are a few technologies I have been working with recently:<br /><br />
             <div className="d-flex justify-content-left font-monospace">

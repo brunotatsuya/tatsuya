@@ -16,7 +16,7 @@ export default function Navbar() {
                         <h4 className="socialMediaButton mx-3 font-weight-bold text-white"><SiGmail /></h4>
                     </a>
                 </div>
-                <div className="text-white-50 font-monospace font-10 mb-4">
+                <div className="text-white-50 font-monospace mb-4">
                     Designed and built by <span className="text-primary">Bruno Tatsuya </span> © 2022
                 </div>
             </div>
