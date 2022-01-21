@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar'
-import PresentationCard from '../components/presentation-card'
-import About from '../components/about'
 import Footer from '../components/footer'
+import PresentationCard from '../components/index/presentation-card'
+import About from '../components/index/about'
+import Blog from '../components/index/blog'
 
-export default function Home() {
+import { getLastBlogPosts } from './api/getLastBlogPosts'
+
+export default function Index(props) {
 	return (
 		<div>
 			<Head>
@@ -17,8 +20,18 @@ export default function Home() {
 				<Navbar></Navbar>
 				<PresentationCard></PresentationCard>
 				<About></About>
+				<Blog posts={props.posts}></Blog>
 				<Footer></Footer>
 			</main>
 		</div>
 	)
 }
+
+export async function getStaticProps() {
+	let res = await getLastBlogPosts();
+	let posts = res.data;
+	if (posts.success == false){
+		posts = [];
+	}
+	return { props: { posts }, revalidate: 3600 }
+  }

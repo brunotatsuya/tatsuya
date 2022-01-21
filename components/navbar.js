@@ -18,10 +18,17 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3" href="#about">About</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#about">about</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3" href="#contact">Contact</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#blog">blog</a>
+            </li>
+            <li className="nav-item mx-0 mx-lg-1">
+              <a className="nav-link py-3 px-0 px-lg-3" href="#blog">contact</a>
+            </li>
+            <li className="nav-item mx-0 mx-lg-1">
+                
+                <a className="nav-link py-3 px-0 px-lg-3" href="https://www.youtube.com/channel/UC__YyRTnI285KMBjGXCCeNg" target="_blank" rel="noreferrer"><img width="20" title="akiseiza" src="/images/akiseiza-fill.png"></img> akizeiza</a>
             </li>
           </ul>
         </div>

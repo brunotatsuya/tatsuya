@@ -1,4 +1,4 @@
-import Typewriter from 'typewriter-effect';
+import Typewriter from 'typewriter-effect'
 import { FiArrowDown } from 'react-icons/fi'
 
 export default function PresentationCard() {
@@ -16,7 +16,7 @@ export default function PresentationCard() {
               <h4 className="font-weight-bold text-white mx-1 font-monospace" data-aos="flip-up" data-aos-delay="1800">
                 <Typewriter
                   options={{
-                    strings: ['Software Developer.', 'Computer Scientist.', 'Writer.', 'RPA Developer.'],
+                    strings: ['Software Developer.', 'Computer Scientist.', 'RPA Developer.', 'Hobby Writer.', 'Hobby Composer.'],
                     autoStart: true,
                     loop: true
                   }}
