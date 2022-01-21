@@ -21,19 +21,19 @@ export default function Blog(props) {
         </div>
 
         <div className="d-flex flex-wrap flex-sm-nowrap justify-content-center align-items-center padding-top-2x padding-bottom-1x bottom-gap-4">
-          {posts.map((obj, index) => {
+          {posts.map((post, index) => {
             return (
-              <div className="font-monospace mx-2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index}>
+              <div className="font-monospace mx-2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index} key={post.id}>
                 <motion.div className="text-center bottom-gap" whileHover={{ scale: 1.1 }}
                   whileTap={{
                     scale: 0.8,
                     borderRadius: "100%"
                   }}>
                   <div className="card">
-                    <img className="card-img-top" src={obj.imgurl} alt="Card image cap" />
+                    <img className="card-img-top" src={post.imgurl} alt="Card image cap" />
                     <div className="card-body">
-                      <h5 className="card-title">{obj.title}</h5>
-                      <p className="card-text">{obj.description}</p>
+                      <h5 className="card-title">{post.title}</h5>
+                      <p className="card-text">{post.description}</p>
                     </div>
                   </div>
                 </motion.div>

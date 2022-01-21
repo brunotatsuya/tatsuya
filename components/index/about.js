@@ -38,7 +38,7 @@ export default function About() {
               <div className="d-flex flex-wrap flex-sm-nowrap">
                 {techs.map((tech, index) => {
                   return (
-                    <div className="mx-2 mb-4" data-aos="fade-left" data-aos-duration="400" data-aos-delay={100 * index}>
+                    <div className="mx-2 mb-4" data-aos="fade-left" data-aos-duration="400" data-aos-delay={100 * index} key={tech.id}>
                       <motion.div whileHover={{ scale: 1.2 }}><img height="48" title={tech.name} src={tech.icon}></img></motion.div>
                     </div>
                   )
