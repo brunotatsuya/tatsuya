@@ -6980,6 +6980,10 @@ textarea.form-control-lg {
   min-width: 100vw !important;
 }
 
+.min-vw-35 {
+  min-width: 35vw !important;
+}
+
 .h-25 {
   height: 25% !important;
 }
@@ -11636,7 +11640,7 @@ html {
   height: 3px;
   margin: 1rem;
   background-color: rgba(var(--bs-dark-rgb), 0.75);
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 #footer {
@@ -11649,4 +11653,8 @@ html {
 
 .socialMediaButton:hover {
   color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bottom-gap {
+  margin-bottom: 3rem;
 }

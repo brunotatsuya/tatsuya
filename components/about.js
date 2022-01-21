@@ -4,14 +4,14 @@ export default function About() {
   return (
     <div className="min-vh-100 bg-light" id="about">
 
-      <div className="container w-75 align-items-center">
+      <div className="container align-items-center">
         <span className="display-5 d-flex justify-content-center title-section" data-aos="fade-left" data-aos-duration="500">about</span>
         <div className="d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200" data-aos-duration="500">
           <div className="divider-title-section"></div>
         </div>
         <div className="d-flex flex-wrap flex-sm-nowrap justify-content-center align-items-center padding-top-2x padding-bottom-1x">
-          <div className="w-75 text-white font-monospace" data-aos="fade-right" data-aos-duration="800">
-            <motion.div className="text-center mb-4" whileHover={{ scale: 1.1 }}
+          <div className="text-white font-monospace" data-aos="fade-right" data-aos-duration="800">
+            <motion.div className="text-center min-vw-35 bottom-gap" whileHover={{ scale: 1.1 }}
               whileTap={{
                 scale: 0.8,
                 borderRadius: "100%"
