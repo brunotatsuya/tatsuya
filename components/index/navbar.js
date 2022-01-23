@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Navbar() {
-  
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top" id="mainNav">
       <div className="container">
@@ -15,22 +15,22 @@ export default function Navbar() {
         <button className="navbar-toggler font-weight-bold text-white btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <FaBars />
         </button>
-        {/* <div className="collapse navbar-collapse" id="navbarResponsive">
+        <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3" onClick={() => router.push("/#about")} >about</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#about">about</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
               <a className="nav-link py-3 px-0 px-lg-3" href="#blog">blog</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
-              <a className="nav-link py-3 px-0 px-lg-3" href="#blog">contact</a>
+              <a className="nav-link py-3 px-0 px-lg-3" href="#contact">contact</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
                 <a className="nav-link py-3 px-0 px-lg-3" href="https://www.youtube.com/channel/UC__YyRTnI285KMBjGXCCeNg" target="_blank" rel="noreferrer"><img width="20" title="akiseiza" src="/images/akiseiza-fill.png"></img> akizeiza</a>
             </li>
           </ul>
-        </div> */}
+        </div>
       </div>
     </nav>
   )

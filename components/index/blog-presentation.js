@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-export default function Blog(props) {
+export default function BlogPresentation(props) {
 
   const posts = props.posts;
 
   return (
     <div className="bg-light2" id="blog">
 
-      <div className="container w-75 align-items-center">
+      <div className="container align-items-center bottom-gap-3">
         <span className="display-5 d-flex justify-content-center title-section" data-aos="fade-right" data-aos-duration="500">blog</span>
         <div className="d-flex justify-content-center" data-aos="fade-right" data-aos-delay="200" data-aos-duration="500">
           <div className="divider-title-section bottom-gap-3"></div>
@@ -20,27 +20,26 @@ export default function Blog(props) {
           </Link>
         </div>
 
-        <div className="d-flex flex-wrap flex-sm-nowrap justify-content-center align-items-center padding-top-2x padding-bottom-1x bottom-gap-4">
+
+        <ul class="cards">
           {posts.map((post, index) => {
             return (
-              <div className="font-monospace mx-2" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index} key={post.id}>
-                <motion.div className="text-center bottom-gap" whileHover={{ scale: 1.1 }}
-                  whileTap={{
-                    scale: 0.8,
-                    borderRadius: "100%"
-                  }}>
+              <li className="cards-item" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index} key={index}>
+                <motion.div whileHover={{ scale: 1.1 }}>
                   <div className="card">
-                    <img className="card-img-top" src={post.imgurl} alt="Card image cap" />
+                    <img className="card-img-top" src={post.imgurl} />
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
-                      <p className="card-text">{post.description}</p>
+                      <p className="card-subtitle">{post.description}</p>
                     </div>
+                    <div className="card-footer"><small class="text-muted">by Bruno Tatsuya - 22/01/2022</small></div>
                   </div>
                 </motion.div>
-              </div>
+              </li>
             )
           })}
-        </div>
+        </ul>
+
       </div>
     </div>
   )

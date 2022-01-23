@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
+import Navbar from '../components/index/navbar'
 import PresentationCard from '../components/index/presentation-card'
 import About from '../components/index/about'
-import Blog from '../components/index/blog'
+import BlogPresentation from '../components/index/blog-presentation'
+import Contact from '../components/index/contact'
+import Footer from '../components/footer'
 
 import { getLastBlogPosts } from './api/getLastBlogPosts'
 
@@ -20,7 +21,8 @@ export default function Index(props) {
 				<Navbar></Navbar>
 				<PresentationCard></PresentationCard>
 				<About></About>
-				<Blog posts={props.posts}></Blog>
+				<BlogPresentation posts={props.posts}></BlogPresentation>
+				<Contact></Contact>
 				<Footer></Footer>
 			</main>
 		</div>

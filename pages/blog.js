@@ -8,7 +8,7 @@ export default function Index() {
 			<Head>
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-				<title>tatsuya blog</title>
+				<title>tatsuya</title>
 				<link rel="shortcut icon" href="/images/favicon.ico" />
 			</Head>
 			<main>

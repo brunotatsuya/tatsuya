@@ -6,8 +6,9 @@ export async function getLastBlogPosts() {
     let db = mongocli.db;
     let posts = await db
       .collection('blog-posts')
-      .find({})
+      .find()
       .sort({ published: -1 })
+      .limit(6)
       .toArray();
     return {
       data: JSON.parse(JSON.stringify(posts)),
