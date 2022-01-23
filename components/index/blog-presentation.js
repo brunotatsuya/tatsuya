@@ -21,7 +21,7 @@ export default function BlogPresentation(props) {
         </div>
 
 
-        <ul class="cards">
+        <ul className="cards">
           {posts.map((post, index) => {
             return (
               <li className="cards-item" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index} key={index}>
