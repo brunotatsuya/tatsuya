@@ -1,9 +1,8 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
-export default function BlogPresentation(props) {
+import PostCards from '../blog/post-cards'
 
-  const posts = props.posts;
+export default function BlogPresentation({posts}) {
 
   return (
     <div className="bg-light2" id="blog">
@@ -20,25 +19,7 @@ export default function BlogPresentation(props) {
           </Link>
         </div>
 
-
-        <ul className="cards">
-          {posts.map((post, index) => {
-            return (
-              <li className="cards-item" data-aos="zoom-in" data-aos-duration="500" data-aos-delay={100*index} key={index}>
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  <div className="card">
-                    <img className="card-img-top" src={post.imgurl} />
-                    <div className="card-body">
-                      <h5 className="card-title">{post.title}</h5>
-                      <p className="card-subtitle">{post.description}</p>
-                    </div>
-                    <div className="card-footer"><small className="text-muted">by Bruno Tatsuya - 22/01/2022</small></div>
-                  </div>
-                </motion.div>
-              </li>
-            )
-          })}
-        </ul>
+        <PostCards posts={posts}></PostCards>
 
       </div>
     </div>

@@ -1,17 +1,14 @@
 import { connectToDatabase } from '../../lib/mongodb'
 
-export async function getLastBlogPosts(limit=1000) {
+export async function getBlogPostBySlug(slug) {
   try {
     let mongocli = await connectToDatabase();
     let db = mongocli.db;
-    let posts = await db
+    let post = await db
       .collection('blog-posts')
-      .find({}, { title: 1, coverImgurl: 1, description: 1, datePublished: 1, author:1 })
-      .sort({ datePublished: -1 })
-      .limit(limit)
-      .toArray();
+      .findOne({ slug: slug });
     return {
-      data: JSON.parse(JSON.stringify(posts)),
+      data: JSON.parse(JSON.stringify(post)),
       success: true,
     };
   } catch (error) {

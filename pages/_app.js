@@ -1,12 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.css'
-import Aos from 'aos'
 import 'aos/dist/aos.css'
+import "nprogress/nprogress.css"
 
 import '../public/Lato.css'
 import '../public/Montserrat.css'
 import '../styles/globals.css'
+import '../styles/github-syntax-highlight.css'
+import '../styles/github-markdown.css'
 
 import { useEffect } from "react"
+import Aos from 'aos'
+import Router from "next/router"
+import nProgress from "nprogress"
+
+Router.events.on("routeChangeStart", nProgress.start);
+Router.events.on("routeChangeError", nProgress.done);
+Router.events.on("routeChangeComplete", nProgress.done);
 
 function App({ Component, pageProps }) {
   useEffect(() => {
