@@ -35,5 +35,5 @@ export async function getStaticProps() {
   if (posts.success == false) {
     posts = [];
   }
-  return { props: { posts }, revalidate: 3600 }
+  return { props: { posts }, revalidate: 3600 };
 }

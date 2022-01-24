@@ -38,10 +38,5 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   let res = await getBlogPostBySlug(slug);
-
-  return {
-    props: {
-      post: res.data
-    },
-  };
+  return { props: { post: res.data }, revalidate: 3600 };
 }
