@@ -6,11 +6,11 @@ import { FaBars } from 'react-icons/fa'
 export default function Navbar() {
 
   return (
-    <nav className="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <nav className="navbar navbar-expand-lg fixed-top bg-secondary" id="mainNav">
       <div className="container">
-        <Link href="/blog" passHref>
+        <Link href="/admin" passHref>
           <a className="navbar-brand" >
-            <BsDiamondFill className="spinner-element" /><span className="mx-3">tatsuya.blog</span>
+            <BsDiamondFill className="spinner-element" /><span className="mx-3">tatsuya.admin</span>
           </a>
         </Link>
         <button className="navbar-toggler font-weight-bold text-white btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

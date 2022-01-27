@@ -5,7 +5,8 @@ import { BsPencilSquare } from 'react-icons/bs'
 import { MdDateRange } from 'react-icons/md'
 
 export default function PostCards({ posts }) {
-  return (
+
+  return posts?.length > 0 ? (
     <ul className="cards pb-5">
       {posts.map((post, index) => {
         var datePublished = new Date(post.datePublished);
@@ -34,5 +35,5 @@ export default function PostCards({ posts }) {
         )
       })}
     </ul>
-  )
+  ) : (<div className="display-6 fs-4 text-center text-muted">No posts yet</div>)
 }

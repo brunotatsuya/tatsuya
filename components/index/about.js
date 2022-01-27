@@ -14,8 +14,7 @@ export default function About() {
 
   return (
     <div className="bg-light" id="about">
-
-      <div className="container align-items-center  bottom-gap-4">
+      <div className="container align-items-center bottom-gap-4">
         <span className="display-5 d-flex justify-content-center title-section" data-aos="fade-left" data-aos-duration="500">about</span>
         <div className="d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200" data-aos-duration="500">
           <div className="divider-title-section bottom-gap-4"></div>

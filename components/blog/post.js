@@ -1,8 +1,7 @@
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
-import rehypeHighlight from 'rehype-highlight'
-
 import { BsPencilSquare } from 'react-icons/bs'
 import { MdDateRange } from 'react-icons/md'
+
+import MarkdownRender from './markdown-render';
 
 export default function Post({ post }) {
   const datePublished = new Date(post.datePublished);
@@ -18,7 +17,7 @@ export default function Post({ post }) {
             <small className="text-muted"><BsPencilSquare /> {post.author} </small>
             <small className="text-muted mx-2"><MdDateRange /> {datePublished.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</small>
           </div>
-          <ReactMarkdown className="markdown-body pt-5 pb-4" rehypePlugins={[rehypeHighlight]}>{post.content}</ReactMarkdown>
+          <MarkdownRender markdown={post.content} />
         </article>
       </div>
     </div>

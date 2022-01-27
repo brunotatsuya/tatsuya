@@ -2,6 +2,7 @@ import Typewriter from 'typewriter-effect'
 import { FiArrowDown } from 'react-icons/fi'
 
 export default function PresentationCard() {
+  
   return (
     <div className="h-100" id="presentationCard">
       <div id="stars"></div>

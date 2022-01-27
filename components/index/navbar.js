@@ -1,6 +1,7 @@
+import Link from 'next/link'
+
 import { BsDiamondFill } from 'react-icons/bs'
 import { FaBars } from 'react-icons/fa'
-import Link from 'next/link'
 
 export default function Navbar() {
 

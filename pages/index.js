@@ -1,16 +1,16 @@
 import Head from 'next/head'
+
 import Navbar from '../components/index/navbar'
 import PresentationCard from '../components/index/presentation-card'
 import About from '../components/index/about'
 import BlogPresentation from '../components/index/blog-presentation'
 import Contact from '../components/index/contact'
 import Footer from '../components/footer'
-
-import { getLastBlogPosts } from './api/getLastBlogPosts'
+import { getLastBlogPosts } from './api/get-last-blog-posts'
 
 export default function Index(props) {
   return (
-    <div>
+    <>
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,15 +25,12 @@ export default function Index(props) {
         <Contact></Contact>
         <Footer></Footer>
       </main>
-    </div>
+    </>
   )
 }
 
+// Static generated with re-generate after 1 hour
 export async function getStaticProps() {
-  let res = await getLastBlogPosts(3);
-  let posts = res.data;
-  if (posts.success == false) {
-    posts = [];
-  }
+  const posts = await getLastBlogPosts(3);
   return { props: { posts }, revalidate: 3600 };
 }
