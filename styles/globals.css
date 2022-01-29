@@ -11415,6 +11415,7 @@ html {
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
 	color: #fff;
+  cursor: pointer;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
@@ -11678,4 +11679,8 @@ html {
   border-radius: 50%;
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.round-border {
+  border-radius: 0.8rem !important;
 }

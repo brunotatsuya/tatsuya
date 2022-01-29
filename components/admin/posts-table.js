@@ -66,26 +66,22 @@ export default function PostsTable({ posts }) {
             <span className="fs-6 text-bold">{row.title}</span>
           </a>
         </Link>),
-      width: '68%'
     },
     {
       name: 'Published',
       selector: row => row.isPublished ?
         (<span className="badge fs-6 bg-success">Yes</span>) :
         (<span className="badge fs-6 bg-warning">No</span>),
-      width: '12%',
       center: true
     },
     {
       name: 'Edit',
       selector: row => (<button className="btn btn-secondary btn-sm" onClick={() => handleEditClick(row)}><MdEdit /></button>),
-      width: '10%',
       center: true
     },
     {
       name: 'Delete',
       selector: row => (<button className="btn btn-danger btn-sm" onClick={() => handleDeleteClick(row)}><MdRemoveCircle /></button>),
-      width: '10%',
       center: true
     },
   ];

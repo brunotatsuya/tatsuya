@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-
+import Footer from '../../components/footer'
 import Navbar from '../../components/admin/navbar'
 import PostsTable from '../../components/admin/posts-table'
 import { AuthGuard } from '../../services/auth'
@@ -17,24 +17,30 @@ export default function Login(props) {
   }
 
   return (
-    <div className="min-vh-100">
+    <>
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>tatsuya.admin</title>
+        <title>Admin | Bruno Tatsuya</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <Navbar></Navbar>
-      <div className="container mt-5 pt-5">
-        <div className="d-flex mx-3 mb-3">
-          <h4>Manage blog posts</h4>
-          <button className="btn btn-primary btn-sm ms-auto" onClick={handleAddClick}>Create post</button>
+      <div className="min-vh-100 bg-light2">
+        <div className="container mt-5 pt-5">
+          <div className="container bg-white pt-4 pb-2 round-border">
+            <div className="d-flex mx-3 mb-3">
+              <h4>Manage blog posts</h4>
+              <button className="btn btn-primary btn-sm ms-auto" onClick={handleAddClick}>Create post</button>
+            </div>
+            <hr />
+            <PostsTable posts={props.posts}></PostsTable>
+            <hr />
+          </div>
         </div>
-        <hr />
-        <PostsTable posts={props.posts}></PostsTable>
-        <hr />
+
       </div>
-    </div>
+      <Footer></Footer>
+    </>
   )
 }
 
