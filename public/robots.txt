@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /blog/*
+Disallow: /admin
+Disallow: /admin/*
+
+Sitemap: https://brunotatsuya.dev/sitemap
