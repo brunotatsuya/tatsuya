@@ -50,6 +50,6 @@ export default function Index(props) {
 
 // Static generated with re-generate after 1 hour
 export async function getStaticProps() {
-  const posts = await getLastBlogPosts(3);
+  const posts = await getLastBlogPosts({limit: 3});
   return { props: { posts }, revalidate: 3600 };
 }

@@ -68,5 +68,5 @@ export default function Login(props) {
 
 export async function getStaticProps() {
   const posts = await getLastBlogPosts({onlyPublished: false});
-  return { props: { posts }, revalidate: 30 }
+  return { props: { posts }, revalidate: 5 }
 }

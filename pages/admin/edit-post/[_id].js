@@ -160,5 +160,5 @@ export async function getStaticProps(context) {
   const { params } = context;
   const _id = params._id;
   const post = await getBlogPostById(_id);
-  return { props: { post }, revalidate: 30 };
+  return { props: { post }, revalidate: 5 };
 }
