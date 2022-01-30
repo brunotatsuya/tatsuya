@@ -5,11 +5,9 @@ import { setCookie } from 'nookies'
 import { connectToDatabase } from '../../../services/mongodb'
 
 export async function signIn(username, password) {
-
+    const mongocli = await connectToDatabase();
     let user = null;
-
     try {
-        let mongocli = await connectToDatabase();
         let db = mongocli.db;
         user = await db
             .collection('admin-users')

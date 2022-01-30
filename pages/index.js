@@ -6,7 +6,7 @@ import About from '../components/index/about'
 import BlogPresentation from '../components/index/blog-presentation'
 import Contact from '../components/index/contact'
 import Footer from '../components/footer'
-import { getLastBlogPosts } from './api/get-last-blog-posts'
+import { getLastBlogPosts } from './api/posts'
 
 export default function Index(props) {
   return (

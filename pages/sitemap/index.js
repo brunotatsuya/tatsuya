@@ -1,6 +1,6 @@
 import { getServerSideSitemap } from 'next-sitemap'
 
-import { getLastBlogPosts } from '../api/get-last-blog-posts'
+import { getLastBlogPosts } from '../api/posts'
 
 export async function getServerSideProps(context) {
   const posts = await getLastBlogPosts();

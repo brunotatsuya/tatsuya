@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Navbar from '../../components/blog/navbar'
 import Footer from '../../components/footer'
 import PostCards from '../../components/blog/post-cards'
-import { getLastBlogPosts } from '../api/get-last-blog-posts'
+import { getLastBlogPosts } from '../api/posts'
 
 export default function Index(props) {
   return (

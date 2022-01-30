@@ -14,19 +14,3 @@ export function verifyJwt(context) {
         return false;
     }
 }
-
-export function AuthGuard(context) {
-    const decodedResult = verifyJwt(context);
-    if (decodedResult) {
-        return {
-            props: { userAuthenticated: decodedResult.username }
-        };
-    } else {
-        return {
-            redirect: {
-                permanent: false,
-                destination: "/admin/login"
-            }
-        };
-    }
-}

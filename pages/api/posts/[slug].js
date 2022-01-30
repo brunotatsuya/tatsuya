@@ -1,8 +1,26 @@
-import { connectToDatabase } from '../../services/mongodb'
-import { verifyJwt } from '../../services/auth'
+import { connectToDatabase } from '../../../services/mongodb'
+import { verifyJwt } from '../../../services/auth'
+
+export async function getBlogPostBySlug(slug) {
+    const mongocli = await connectToDatabase();
+    let db = mongocli.db;
+    let post = await db
+        .collection('blog-posts')
+        .findOne({ slug: slug }, { projection: {
+            _id: false,
+            slug: true,
+            author: true,
+            title: true,
+            content: true,
+            coverImgurl: true,
+            description: true,
+            datePublished: true,
+            isPublished: true
+          }});
+    return post;
+}
 
 export async function deleteBlogPostBySlug(slug) {
-    let mongocli = await connectToDatabase();
     let db = mongocli.db;
     let result = await db
         .collection('blog-posts')
@@ -21,9 +39,10 @@ export async function deleteBlogPostBySlug(slug) {
 }
 
 export default async function handler(req, res) {
-    // Restricts endpoint to only POST requests
-    if (req.method !== 'POST') {
-        res.status(405).send('Only POST requests are allowed');
+    // Restricts endpoint to only DELETE requests
+    if (req.method !== 'DELETE') {
+        res.status(405).send('Only DELETE requests are allowed');
+        return;
     }
 
     // Checks if Jwt in cookies is valid
@@ -33,8 +52,7 @@ export default async function handler(req, res) {
         return;
     }
 
-    // Gets parameters from request body
-    const { slug } = req.body;
+    const { slug } = req.query
 
     const deletionResult = await deleteBlogPostBySlug(slug);
 
@@ -45,4 +63,5 @@ export default async function handler(req, res) {
         res.status(400).json(deletionResult);
         return;
     }
+
 }

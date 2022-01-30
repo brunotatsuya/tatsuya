@@ -3,8 +3,8 @@ import Head from 'next/head'
 import Navbar from '../../components/blog/navbar'
 import Footer from '../../components/footer'
 import Post from '../../components/blog/post'
-import { getLastBlogPosts } from '../api/get-last-blog-posts'
-import { getBlogPostBySlug } from '../api/get-blog-post-by-slug'
+import { getLastBlogPosts } from '../api/posts'
+import { getBlogPostBySlug } from '../api/posts/[slug]'
 
 export default function PostPage(props) {
   const post = props.post;

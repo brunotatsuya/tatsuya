@@ -22,13 +22,8 @@ export default function PostsTable({ posts }) {
       confirmButtonText: 'Yes, delete',
       showLoaderOnConfirm: true,
       preConfirm: () => {
-        return fetch('/api/delete-blog-post-by-slug', {
-          method: 'POST',
-          credentials: 'include',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ slug: row.slug }),
+        return fetch('/api/posts/' + row.slug, {
+          method: 'DELETE'
         })
           .then(response => response.json())
           .then(response => {
