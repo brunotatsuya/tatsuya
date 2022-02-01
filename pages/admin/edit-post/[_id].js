@@ -10,9 +10,7 @@ import MarkdownRender from "../../../components/blog/markdown-render"
 import AuthGuard from '../../../components/auth-guard'
 import { generateSlug } from '../../../services/slug'
 import { useLeavePageConfirm } from '../../../services/custom-hooks'
-import { getLastBlogPosts } from '../../api/posts'
 import { getBlogPostById } from '../../api/posts/[_id]'
-import { FaRegClosedCaptioning } from 'react-icons/fa'
 
 export default function CreatePost(props) {
   const post = props.post;
@@ -150,15 +148,15 @@ export default function CreatePost(props) {
   )
 }
 
-export async function getStaticPaths() {
-  const posts = await getLastBlogPosts({onlyPublished: false});
-  const paths = posts.map((post) => ({ params: { _id: post._id } }));
-  return { paths, fallback: 'blocking' };
-}
+// export async function getStaticPaths() {
+//   const posts = await getLastBlogPosts({onlyPublished: false});
+//   const paths = posts.map((post) => ({ params: { _id: post._id } }));
+//   return { paths, fallback: 'blocking' };
+// }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { params } = context;
   const _id = params._id;
   const post = await getBlogPostById(_id);
-  return { props: { post }, revalidate: 5 };
+  return { props: { post } };
 }
