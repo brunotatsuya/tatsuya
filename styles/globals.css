@@ -83,6 +83,11 @@ main {
   height: 100vh;
 }
 
+pre {
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -298,7 +303,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
-pre,
 kbd,
 samp {
   font-family: var(--bs-font-monospace);
