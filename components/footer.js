@@ -3,7 +3,7 @@ import { SiGmail } from 'react-icons/si'
 
 export default function Navbar() {
   return (
-    <div className="bg-dark text-center" id="footer">
+    <div className="bg-dark text-center pb-1" id="footer">
       <div className="d-inline-flex mt-2">
         <a href="https://github.com/brunotatsuya" target="_blank" rel="noreferrer">
           <h4 className="socialMediaButton mx-3 font-weight-bold text-white"><BsGithub /></h4>
@@ -15,7 +15,7 @@ export default function Navbar() {
           <h4 className="socialMediaButton mx-3 font-weight-bold text-white"><SiGmail /></h4>
         </a>
       </div>
-      <div className="text-white-50 font-monospace mb-4">
+      <div className="text-white-50 font-monospace mb-2">
         Designed and built by <span className="text-primary">Bruno Tatsuya </span> © 2022
       </div>
     </div>
