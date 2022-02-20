@@ -21,7 +21,7 @@ export default function About() {
         </div>
         <div className="d-flex flex-wrap flex-sm-nowrap justify-content-center align-items-center padding-top-2x padding-bottom-1x">
           <div className="text-white font-monospace" data-aos="zoom-in" data-aos-duration="800">
-            <motion.div className="text-center min-vw-35 bottom-gap-3" whileHover={{ scale: 1.1 }}
+            <motion.div className="text-center min-vw-35 bottom-gap-2" whileHover={{ scale: 1.1 }}
               whileTap={{
                 scale: 0.8,
                 borderRadius: "100%"
