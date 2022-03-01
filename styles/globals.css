@@ -11775,3 +11775,8 @@ html {
     transform: rotate(90deg);
   }
 }
+
+#containerNavbar {
+  width: 100vw !important;
+  max-width: 100vw !important;
+}

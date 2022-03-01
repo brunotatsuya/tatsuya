@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top bg-secondary" id="mainNav">
-      <div className="container">
+      <div className="container" id="containerNavbar">
         <Link href="/admin" passHref>
           <a className="navbar-brand" >
             <BsDiamondFill className="spinner-element" /><span className="mx-3 fs-5">brunotatsuya.dev/admin</span>
