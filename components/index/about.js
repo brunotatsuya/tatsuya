@@ -4,13 +4,14 @@ export default function About() {
 
   const techs = [
     { name: "Python", icon: "/images/python.svg" },
-    { name: "Flask", icon: "/images/flask.svg" },
-    { name: "JavaScript", icon: "/images/js.svg" },
-    { name: "TypeScript", icon: "/images/ts.svg" },
+    { name: "Flask", icon: "/images/flask.png" },
+    { name: "FastAPI", icon: "/images/fast-api.svg" },
     { name: "React", icon: "/images/react.svg" },
+    { name: "Node.js", icon: "/images/nodejs.png" },
     { name: "Next.js", icon: "/images/nextjs.svg" },
+    { name: "Ruby on Rails", icon: "/images/ruby-on-rails.png" },
     { name: "MongoDB", icon: "/images/mongodb.svg" },
-    { name: "Microsoft SQL Server", icon: "/images/mssql.svg" }
+    { name: "PostgreSQL", icon: "/images/postgres.png" }
   ]
 
   return (
@@ -32,8 +33,8 @@ export default function About() {
           </div>
 
           <div className="container font-monospace fs-6" data-aos="fade-left" data-aos-duration="800">
-            Hi, my name is <b className="text-secondary">Bruno</b>! I'm a computer scientist and software developer with 3+ years of experience, living in Portugal. Currently working as a Backend Developer at <a className="left" target="_blank" href="https://web.imaginarycloud.com/" rel="noreferrer">Imaginary Cloud</a>, I am also an entusiast in Machine Learning and Natural Language Processing techniques.
-            <br /><br />Here are a few technologies I have been working with recently:<br /><br />
+            Hi, I'm <b className="text-secondary">Bruno</b>! I'm a software developer and computer scientist with 4+ years of experience, based in Portugal. Also an entusiast in data science and automation. Currently working as a Software Developer at <a className="left" target="_blank" href="https://web.imaginarycloud.com/" rel="noreferrer">Imaginary Cloud</a>, I believe technology should be used to make people's lives easier.
+            <br /><br />Here are a few technologies I have experience with:<br /><br />
             <div className="d-flex justify-content-left font-monospace">
               <div className="d-flex flex-wrap flex-sm-nowrap">
                 {techs.map((tech, index) => {

@@ -27,6 +27,9 @@ export default function Navbar() {
               <a className="nav-link py-3 px-0 px-lg-3" href="#contact">contact</a>
             </li>
             <li className="nav-item mx-0 mx-lg-1">
+              <a className="nav-link py-3 px-0 px-lg-3" href="/resume.pdf" target="_blank">resume</a>
+            </li>
+            <li className="nav-item mx-0 mx-lg-1">
                 <a className="nav-link py-3 px-0 px-lg-3" href="https://www.youtube.com/channel/UC__YyRTnI285KMBjGXCCeNg" target="_blank" rel="noreferrer"><img width="20" title="akiseiza" src="/images/akiseiza-fill.png"></img> akizeiza</a>
             </li>
           </ul>
